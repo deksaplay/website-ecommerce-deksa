@@ -21,10 +21,20 @@ namespace website_e_commerce
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<InventoryService>();
 
             services.AddScoped<AuthService>();
             services.AddScoped<CategoryService>();
-
+            services.AddScoped<CartService>();
+            services.AddScoped<CheckoutService>();
+            services.AddScoped<ProductService>();
+            services.AddScoped<PaymentService>();
+            services.AddScoped<OrderService>();
+            services.AddScoped<CustomerService>();
+            services.AddScoped<PromotionService>();
+            services.AddScoped<ReportService>();
+            services.AddScoped<WishlistService>();
+            services.AddScoped<ReviewService>();
             services.AddControllers();
         }
 
