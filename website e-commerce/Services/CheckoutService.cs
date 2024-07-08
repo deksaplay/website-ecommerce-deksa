@@ -1,6 +1,4 @@
-﻿using ECommerce.Data;
-using ECommerce.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 using website_e_commerce.Base;

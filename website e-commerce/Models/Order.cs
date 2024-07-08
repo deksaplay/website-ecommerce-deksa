@@ -9,7 +9,7 @@
         public string Status { get; set; }
         public string OrderNumber { get; set; }
         public decimal TotalAmount { get; set; }
-        public List<OrderItem> Items { get; set; }
+        
     }
     public class OrderItem
     {
