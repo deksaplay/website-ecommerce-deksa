@@ -21,8 +21,8 @@ namespace website_e_commerce
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<InventoryService>();
 
+            services.AddScoped<InventoryService>();
             services.AddScoped<AuthService>();
             services.AddScoped<CategoryService>();
             services.AddScoped<CartService>();

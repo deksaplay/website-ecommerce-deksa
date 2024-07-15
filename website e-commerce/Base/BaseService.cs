@@ -28,8 +28,16 @@ namespace website_e_commerce.Base
 
         public async Task<T> CreateAsync(T entity)
         {
-            _context.Set<T>().Add(entity);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Set<T>().Add(entity);
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
             return entity;
         }
 
