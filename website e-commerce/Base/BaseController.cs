@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-namespace website_e_commerce.Controller
+namespace website_e_commerce.Controllers
 
   {
     [ApiController]

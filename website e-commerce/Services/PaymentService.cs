@@ -10,10 +10,6 @@ namespace website_e_commerce.Services
         {
         }
 
-        public async Task<Payment> ProcessPaymentAsync(Payment payment)
-        {
-            payment.Status = "Processed";
-            return await CreateAsync(payment);
-        }
+       
     }
 }

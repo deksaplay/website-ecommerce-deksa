@@ -21,15 +21,32 @@ namespace website_e_commerce.Services
                 return null;
             }
 
+            List<OrderItem> ORDERitems = new List<OrderItem>();
+            foreach (var cartItem in cartItems)
+            {
+                ORDERitems.Add(
+                    new OrderItem()
+                    {
+                        OrderId = 4,
+                        ProductId = cartItem.ProductId,
+                        Price = cartItem.Price,
+                        Quantity = cartItem.Quantity,
+                    });
+            }
+
             var order = new Order
             {
+                Id = 4,
                 UserId = userId,
-                Items = cartItems,
+                Items = ORDERitems,
                 TotalPrice = cartItems.Sum(ci => ci.Price * ci.Quantity),
                 Status = "Pending"
             };
+            
 
-            _context.Orders.Add(order);
+            var sss =_context.Orders.Add(order);
+
+
             _context.CartItems.RemoveRange(cartItems);
             await _context.SaveChangesAsync();
 

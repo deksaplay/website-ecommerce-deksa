@@ -35,6 +35,7 @@ namespace website_e_commerce
             services.AddScoped<ReportService>();
             services.AddScoped<WishlistService>();
             services.AddScoped<ReviewService>();
+            services.AddScoped<UserService>();
             services.AddControllers();
         }
 
@@ -61,6 +62,8 @@ namespace website_e_commerce
             {
                 endpoints.MapControllers();
             });
+            
+
         }
     }
 }
